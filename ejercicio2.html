@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+
+    <div class="main-text" style="text-align: center;">
+        <h2>Ordenar numeros de un array de mayor a menor</h2>
+    </div>
+    <script>
+        
+        var inicio = ["ejemplo", 3, 9, 1, 10, 500, 1, 10, true];
+
+        
+        function ordenarNumeros(arr) {
+            var len = arr.length;
+            for (var i = 0; i < len - 1; i++) {
+                for (var j = 0; j < len - 1; j++) {
+                    if (arr[j] < arr[j + 1]) { 
+                        var temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+        }
+
+      
+        ordenarNumeros(inicio);
+
+        
+        for (var i = 0; i < inicio.length; i++) {
+            if (typeof inicio[i] === 'number') {
+                console.log(inicio[i]);
+            }
+        }
+    </script>
+
+</body>
+
+
+</html>
